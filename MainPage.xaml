@@ -7,6 +7,7 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
+
             <Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"
@@ -30,6 +31,51 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+
+            <!-- Added section for students -->
+            <Label
+                Text="Elevii nostri"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <!-- Elev 1 -->
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                <Image
+                    Source="elev1.png"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="Imagine elev 1" />
+                <Label
+                    Text="Elev 1 - Ii place sa invete."
+                    VerticalOptions="Center" />
+            </StackLayout>
+
+            <!-- Elev 2 -->
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                <Image
+                    Source="elev2.png"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="Imagine elev 2" />
+                <Label
+                    Text="Elev 2 - Participa la activitati."
+                    VerticalOptions="Center" />
+            </StackLayout>
+
+            <!-- Elev 3 -->
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                <Image
+                    Source="elev3.png"
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Aspect="AspectFit"
+                    SemanticProperties.Description="Imagine elev 3" />
+                <Label
+                    Text="Elev 3 - Este foarte activ."
+                    VerticalOptions="Center" />
+            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
 
