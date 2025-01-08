@@ -7,7 +7,7 @@ xmlns:local="clr-namespace:SabauDenisLab7"
 Shell.FlyoutBehavior="Disabled">
     <TabBar>
         <ShellContent
-Title="Shopping Lists"
+Title="Welcome"
 ContentTemplate="{DataTemplate local:MainPage}"
 />
         <ShellContent
@@ -17,6 +17,10 @@ ContentTemplate="{DataTemplate local:AboutPage}"
         <ShellContent
 Title="My Shopping Lists"
 ContentTemplate="{DataTemplate local:ListEntryPage}"
+/>
+        <ShellContent
+Title="My Shops"
+ContentTemplate="{DataTemplate local:ShopEntryPage}"
 />
     </TabBar>
     

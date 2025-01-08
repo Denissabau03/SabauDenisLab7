@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:local="clr-namespace:SabauDenisLab7"
 x:Class="SabauDenisLab7.ListPage"
 Title="ListPage">
     <StackLayout Margin="20">
         <Editor Placeholder="Enter the description of the shopping list"
 Text="{Binding Description}"
-HeightRequest="100" />
+HeightRequest="50" >
+            <Editor.Behaviors>
+                <local:ValidationBehaviour />
+            </Editor.Behaviors>
+        </Editor>
+        <Picker x:Name="ShopPicker" Title="Enter Shop Name"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -18,5 +24,24 @@ Clicked="OnSaveButtonClicked" />
 Text="Delete"
 Clicked="OnDeleteButtonClicked"/>
         </Grid>
+        <ListView x:Name="listView"
+Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding Name}" 
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="StartAndExpand" />
+                            <Button Text="Delete Item" 
+                                    Clicked="OnDeleteItemButtonClicked" 
+                                    CommandParameter="{Binding .}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Add/Choose Item to buy" MaximumWidthRequest="300"
+Clicked="OnChooseButtonClicked"/>
     </StackLayout>
 </ContentPage>

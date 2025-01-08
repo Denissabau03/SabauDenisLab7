@@ -5,22 +5,24 @@
              Title="ListEntryPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Shopping List"
-Clicked="OnShopListAddedClicked" />
+                     Clicked="OnShopListAddedClicked" />
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView"
-Margin="20"
-ItemSelected="OnListViewItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Description}"
-Detail="{Binding Date}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <ListView x:Name="listView"
+                  Margin="20"
+                  ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Description}"
+                              Detail="{Binding Date}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Welcome to .NET MAUI!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
